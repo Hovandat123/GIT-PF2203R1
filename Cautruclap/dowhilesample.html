@@ -10,14 +10,22 @@
     
 </body>
 <script>
-    let value = null;
+    
+    let value = null; // Giải mang tính có vòng lặp
     do {
         value= +prompt("Nhập vào số từ 1 -> 10: ");
         alert("Số bạn vừa nhập là: "+value);
     }
     while (value>=1 && value <=10);
     alert("Bạn đã nhập sai xin hãy nhập lại từ đầu!!!");
-    
+    /
+    // giải theo codegym phải reset chứ không lắp
+    let value = null;
+    do {
+        value= +prompt("Nhập vào số từ 1 -> 10: ");
+    }
+    while (value<1 || value >10);
+    alert("Số bạn vừa nhập là: "+value);
 
 </script>
 </html>

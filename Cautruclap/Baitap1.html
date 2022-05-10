@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button type="button" onclick="game();">Chơi</button>
+</body>
+<script>
+    function game() {
+        let i = 1;
+        do {
+            let number = prompt("Bạn hãy Đoán số từ 1-->99: ")
+            if (number == 9)
+                alert("Bạn đã nhập đúng")
+            else
+                alert("Bạn đã nhập sai chúc may mắn lần sau")
+            i++
+        } while (i < 4)
+        alert("Bạn đã thất bai!!! ");
+    }
+</script>
+
+</html>

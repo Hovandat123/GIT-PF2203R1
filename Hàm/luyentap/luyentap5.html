@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="index">
+    <button onclick="check()">check in</button>
+    <div id="result"></div>
+</body>
+<script>
+    function check() {
+        let num1 = 1;
+        let num = document.getElementById("index").value
+        for (let i = 2; i <= num; i++) {
+            num1 *= i
+
+        }
+        document.getElementById("result").innerHTML = "giai thừa của " + num + " là: " + num1;
+    }
+</script>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="import" oninput="getValue(this.value)">
+    <button onclick="footToMeter()">Foot to Meter</button>
+    <button onclick="meterToFoot()">Meter to Foot</button>
+    <p id="result"></p>
+</body>
+<script>
+    function footToMeter() {
+        let foot = document.getElementById("import").value
+        document.getElementById("result").innerHTML = foot + " foot is " + 0.305 * foot + " meter."
+    }
+
+    function meterToFoot() {
+        let metter = document.getElementById("import").value
+        document.getElementById("result").innerHTML = metter + " metter is " + 3.279 * metter + " foot."
+    }
+</script>
+
+</html>

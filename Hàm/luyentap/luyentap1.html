@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="result"></div>
+</body>
+<script>
+    function check() {
+        let num1 = +prompt("Nhập vào số thứ nhât: ")
+        let num2 = +prompt("Nhập vào số thứ hai: ")
+        if (num1 > num2) {
+            alert("số thứ nhất đang lớn hơn số thứ hai")
+        } else {
+            document.getElementById("result").innerHTML = "Tổng hai tham số là " + (num1 + num2)
+        }
+    }
+    check()
+</script>
+
+</html>

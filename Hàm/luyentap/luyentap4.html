@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="result1"></div>
+    <div id="result2"></div>
+</body>
+<script>
+    radius = +prompt("Nhập bán kính r= ")
+
+    function check() {
+        let area = Math.PI * Math.pow(radius, 2)
+        let circuit = 2 * Math.PI * radius
+        document.getElementById("result1").innerHTML = "Diện tích hình tròn là: " + area.toFixed(3)
+        document.getElementById("result2").innerHTML = "Chu vi hình tròn là: " + circuit.toFixed(3)
+    }
+    check()
+</script>
+
+</html>

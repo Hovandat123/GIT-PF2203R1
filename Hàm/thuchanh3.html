@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="sum1"></div>
+    <div id="sum2"> </div>
+    <div id="sum3"> </div>
+</body>
+<script>
+    let num = +prompt("Nhập vào số phần tử mảng: ")
+    let arr1 = []
+    let arr2 = []
+    let arr3 = []
+    for (let i = 0; i < num; i++) {
+        arr1[i] = Math.floor(Math.random() * 100);
+        arr2[i] = Math.floor(Math.random() * 100);
+        arr3[i] = Math.floor(Math.random() * 100);
+    }
+
+    function minArray(arr) {
+        let min = arr[0];
+        if (arr.length == 0) {
+            return -1
+        }
+        for (let i = 0; i < arr.length; i++) {
+            if (min > arr[i]) {
+                min = arr[i]
+            }
+        }
+        return min
+    }
+    let min1 = minArray(arr1)
+    let min2 = minArray(arr2)
+    let min3 = minArray(arr3)
+    document.getElementById("sum1").innerHTML = "Các phần tử của mảng 1 arr1[" + num + "] = " + arr1 + " Giá trị nhỏ nhất trong mảng là " + min1;
+    document.getElementById("sum2").innerHTML = "Các phần tử của mảng 2 arr2[" + num + "] = " + arr2 + " Giá trị nhỏ nhất trong mảng là " + min2;
+    document.getElementById("sum3").innerHTML = "Các phần tử của mảng 3 arr3[" + num + "] = " + arr3 + " Giá trị nhỏ nhất trong mảng là " + min3;
+</script>
+
+</html>

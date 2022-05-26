@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Nhập số cần kiểm tra là số nguyên tố</p>
+    <input type="number" id="import" oninput="check(this.value)" onchange="check(this.value)">
+    <button onclick="isPrime()">Kiểm tra</button>
+    <div id="result"></div>
+</body>
+<script>
+    function isPrime(number) {
+        // let number = document.getElementById("import").value
+        // if (number < 0) {
+        //     document.getElementById("result").innerHTML = "Số " + number + " Không phải là số nguyên tố"
+        // }
+        // if (number == 0 || number == 1) {
+        //     document.getElementById("result").innerHTML = "Số " + number + " trường hợp không được xét là số nguyên tố"
+        // }
+        if (number < 2) {
+            return false
+        }
+        for (let i = 2; i < number; i++) {
+            if (number % i == 0) {
+                return false
+            } else {
+                return true
+            }
+        }
+
+    }
+
+    function check(number) {
+        if (isPrime(number)) {
+            document.getElementById("result").innerHTML = "Số " + number + " là số nguyên tố"
+        } else {
+            document.getElementById("result").innerHTML = "Số " + number + " Không phải là số nguyên tố"
+        }
+    }
+</script>
+
+</html>

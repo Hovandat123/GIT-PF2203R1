@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Caculator</h1>
+    <input type="number" id="import1">
+    <input type="number" id="import2"> <br>
+    <br>
+    <button onclick="add()">Addition(+)</button>
+    <button onclick="sub()">Subtraction(-)</button>
+    <button onclick="mul()">Multiplication(x)</button>
+    <button onclick="div()">Division(/)</button>
+    <div id="result"></div>
+</body>
+<script>
+    function add() {
+        let number1 = +document.getElementById("import1").value
+        let number2 = +document.getElementById("import2").value
+        document.getElementById("result").innerHTML = number1 + number2
+    }
+
+    function sub() {
+        let number1 = +document.getElementById("import1").value
+        let number2 = +document.getElementById("import2").value
+        document.getElementById("result").innerHTML = number1 - number2
+    }
+
+    function mul() {
+        let number1 = +document.getElementById("import1").value
+        let number2 = +document.getElementById("import2").value
+        document.getElementById("result").innerHTML = number1 * number2
+    }
+
+    function div() {
+        let number1 = +document.getElementById("import1").value
+        let number2 = +document.getElementById("import2").value
+        document.getElementById("result").innerHTML = number1 / number2
+    }
+</script>
+
+</html>

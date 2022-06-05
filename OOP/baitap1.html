@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="600" height="300" style="border: 1px solid;"></canvas>
+</body>
+<script>
+    class Restangle {
+        x
+        y
+        constructor(x, y) {
+            this.x = x
+            this.y = y
+        }
+        createres() {
+            let ctx = document.getElementById("canvas").getContext("2d");
+            // let interval;
+            let x = Math.random() * 600;
+            let y = Math.random() * 300;
+            ctx.beginPath();
+            ctx.fillStyle = "red";
+
+            ctx.fillRect(60, 60, this.x, this.y);
+
+        }
+        getArea() {
+            let area = this.x * this.y;
+            return area;
+        }
+        getCircuit() {
+            let cir = (this.x + this.y) * 2;
+            return cir;
+        }
+    }
+
+    let res1 = new Restangle(Math.random() * 600, Math.random() * 300);
+    res1.createres();
+
+    let area1 = res1.getArea();
+    let cir1 = res1.getCircuit();
+    console.log("area: " + area1 + " circuit: " + cir1);
+</script>
+
+</html>

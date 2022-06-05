@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Giá hoa quả</h1>
+    <input type="text" id="type">
+    <button onclick="button()">Xem giá</button> <br>
+    <br>
+    <div id="result"></div>
+</body>
+<script>
+    function button() {
+        let giatri = document.getElementById("type").value;
+        switch (giatri) {
+            case "Ổi":
+            case "Dưa Hấu":
+                document.getElementById("result").innerHTML = "2000 VNĐ/kg"
+                break
+            case "Táo":
+            case "Xoài":
+                document.getElementById("result").innerHTML = "3000 VNĐ/kg"
+                break
+            case "Cam":
+            case "Chôm Chôm":
+                document.getElementById("result").innerHTML = "4000 VNĐ/kg"
+                break
+            case "Măng Cụt":
+                document.getElementById("result").innerHTML = "5000 VNĐ/kg"
+                break
+
+        }
+    }
+</script>
+
+</html>

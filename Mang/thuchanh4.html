@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="result"></div> <br>
+    <button onclick="findMin()">Find Min</button>
+    <button onclick="findMax()">Find Max</button>
+    <br>
+    <div id="result1"></div><br>
+    <div id="result2"></div>
+</body>
+<script>
+    let nums = [];
+    for (var i = 0; i < 100; ++i) {
+        nums[i] = Math.floor(Math.random() * 1000);
+    }
+    document.getElementById("result").innerHTML = nums
+
+    function findMin() {
+        let min = nums[0];
+        for (let i = 1; i < nums.length; ++i) {
+            if (nums[i] < min) {
+                min = nums[i];
+            }
+        }
+        return document.getElementById("result1").innerHTML = ("The minimum value is: " + min);
+    }
+
+    function findMax() {
+        let max = nums[0];
+        for (let i = 1; i < nums.length; ++i) {
+            if (nums[i] > max) {
+                max = nums[i];
+            }
+        }
+        return document.getElementById("result2").innerHTML = ("The maximum value is: " + max);
+    }
+</script>
+
+</html>

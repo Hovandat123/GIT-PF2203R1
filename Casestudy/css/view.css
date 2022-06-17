@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#admin {
+    float: right;
+    position: relative;
+    padding: 20px 20px;
+    color: black;
+}
+
+#menu {
+    font-family: sans-serif;
+    width: 1520px;
+}
+
+#menu p {
+    text-align: left;
+    font-size: 1cm;
+    color: rgb(128, 239, 44);
+}
+
+#menu ul {
+    list-style-type: none;
+    background: #806461;
+    text-align: center;
+}
+
+#menu ul li {
+    display: inline-table;
+    width: 200px;
+    height: 70px;
+    line-height: 60px;
+    position: relative;
+}
+
+
+/* #menu ul li button:hover {
+    background: #dddddd;
+    color: black;
+} */
+
+#menu ul li>.phone {
+    display: none;
+}
+
+#menu ul li:hover .phone {
+    display: block;
+    position: absolute;
+}
+
+#menu ul li button {
+    font-family: sans-serif;
+    border: none;
+    width: 98%;
+    height: 95%;
+    line-height: 40px;
+}
+
+#logo ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+#logo ul li {
+    display: inline-table;
+    /* position: relative; */
+}
+
+#logo button {
+    border: none;
+}
+
+#display {
+    width: 1520px;
+    height: 700px;
+}
+
+#listBody {
+    float: left;
+    width: 20%;
+    height: 100%;
+}
+
+#displayElement {
+    font-family: sans-serif;
+    float: right;
+    width: 75%;
+    height: 100%;
+    padding: 10px 30px;
+    color: black;
+}
+
+#table {
+    width: 80%;
+    height: 50px;
+    padding: 8px;
+    border: 2px solid blue;
+    color: black;
+}
+
+#displayElement .priceCart {
+    display: inline-table;
+}
+
+#displayElement .cart {
+    width: 90px;
+    height: 40px;
+}
+
+#displayElement button {
+    border: none;
+    background: #dddddd;
+    font-family: sans-serif;
+}
+
+#displayElement .imagePhone {
+    width: 200px;
+    height: 200px;
+    float: center;
+}
+
+#displayElement .name {
+    font-family: sans-serif;
+    width: 220px;
+    height: 50px;
+    color: rgb(14, 244, 45);
+    font-size: 26px;
+}
+
+#displayElement .infomation {
+    font-family: sans-serif;
+    width: 300px;
+    height: 80px;
+    color: rgba(21, 22, 21, 0.884);
+    font-size: 13px;
+}

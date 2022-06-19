@@ -7,5 +7,5 @@ imageChange = function() {
     if (index == 3) {
         index = 0;
     }
-    setInterval(imageChange, 2000);
+    setInterval(imageChange, 3000);
 }

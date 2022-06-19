@@ -3,16 +3,14 @@ class Product {
     price
     type
     image
-    cart
     info1
     info2
     info3
-    constructor(name, price, type, image, cart, info1, info2, info3) {
+    constructor(name, price, type, image, info1, info2, info3) {
         this.name = name;
         this.price = price;
         this.type = type;
         this.image = image;
-        this.cart = cart;
         this.info1 = info1;
         this.info2 = info2;
         this.info3 = info3;
@@ -32,16 +30,13 @@ class Product {
     getType() {
         return this.type;
     }
-    getCart() {
-        return this.cart;
-    }
     getInfo1() {
         return this.info1;
     }
     getInfo2() {
         return this.info2;
     }
-    getInfo2() {
+    getInfo3() {
         return this.info3;
     }
     setName(name) {
@@ -58,9 +53,6 @@ class Product {
 
     setType(type) {
         this.type = type;
-    }
-    setCart(cart) {
-        this.cart = cart;
     }
     setInfo1() {
         return this.info1;

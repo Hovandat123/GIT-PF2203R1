@@ -3,6 +3,37 @@
     padding: 0;
 }
 
+#header ul li {
+    list-style-type: none;
+    display: inline-table;
+}
+
+#header .imagetime>img {
+    width: 1000px;
+    height: 200px;
+}
+
+
+/* #header .headerAdmin {
+    text-align: right;
+    float: left;
+    color: black;
+} */
+
+#logoType ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+#logoType ul li {
+    display: inline-table;
+    /* position: relative; */
+}
+
+#logoType button {
+    border: none;
+}
+
 #admin {
     float: right;
     position: relative;
@@ -23,7 +54,7 @@
 
 #menu ul {
     list-style-type: none;
-    background: #806461;
+    background: hsl(0, 11%, 98%);
     text-align: center;
 }
 
@@ -58,20 +89,6 @@
     line-height: 40px;
 }
 
-#logo ul {
-    list-style-type: none;
-    text-align: center;
-}
-
-#logo ul li {
-    display: inline-table;
-    /* position: relative; */
-}
-
-#logo button {
-    border: none;
-}
-
 #display {
     width: 1520px;
     height: 700px;
@@ -79,8 +96,15 @@
 
 #listBody {
     float: left;
-    width: 20%;
-    height: 100%;
+    width: 380px;
+    height: 150px;
+    line-height: 50px;
+    padding: 10px 30px;
+}
+
+#listBody .dropdown-menu button {
+    width: 200px;
+    height: 45px;
 }
 
 #displayElement {

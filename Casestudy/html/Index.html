@@ -12,24 +12,22 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../css/view.css">
+    <link rel="stylesheet" href="../css/chatbox.css">
 </head>
 
-<body>
+<body onload="checkAdmin()">
     <div>
-        <div>
+        <div id="contanter">
             <div id="header">
-                <div id="admin">
-                    <a href="login.html">
-                        <p>Đăng nhập</p>
-                    </a>
-                    <a href="login.html">
-                        <p>Đăng Ký</p>
-                    </a>
-                </div>
-                <div id="logo"><img src="../image/logo.png" alt="Lỗi" width="300px" height="160px"></div>
-                <div class="imagetime">
-                    <img id="img" onclick="imageChange()" src="../image/giamgia1.png" alt="">
-                </div>
+                <ul>
+                    <li id="logo"><img src="../image/logo.png" alt="Lỗi" width="250px" height="160px"></li>
+                    <li class="imagetime">
+                        <img id="img" onclick="imageChange()" src="../image/giamgia1.png" alt="">
+                    </li>
+                    <li id="headerAdmin">
+                    </li>
+
+                </ul>
             </div>
 
         </div>
@@ -71,7 +69,7 @@
                 <li> <button class="btn btn-danger">HÀNG KHUYẾN MÃI</button> </li>
             </ul>
         </div>
-        <div id="logo">
+        <div id="logoType">
             <ul>
                 <li> <button onclick="webxioami"> <a href="https://www.mi.com/global/"><img src="../image/xioami.webp"  alt="lỗi" width="250px" height="120px"></a> </button></li>
                 <li> <button onclick="websamsung"> <a href="https://www.samsung.com/vn/mobile/"><img src="../image/samsung.webp" alt="lỗi" width="250px" height="120px"></a></button></li>
@@ -81,33 +79,60 @@
             </ul>
         </div>
         <div id="display">
-            <div id="listBody">
+            <div id="listBody" class="listBody" onclick="listBody()">
                 <h4>Danh mục tìm kiếm</h4>
+                <input type="input" placeholder="Sản phẩm cần tìm..." id="search">
                 <div class="dropdown">
                     <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-                      Dropdown button
+                      Điện thoại di động
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Link 1</a></li>
-                        <li><a class="dropdown-item" href="#">Link 2</a></li>
-                        <li><a class="dropdown-item" href="#">Link 3</a></li>
+                        <li> <button onclick="showXiaomi()">Xiaomi</button></li>
+                        <li> <button onclick="showSamsung()">Sam Sung</button></li>
+                        <li><button onclick="showApple()">Apple</button></li>
                     </ul>
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                        Máy tính bảng
+                      </button>
+                    <div>
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                        Pin dự phòng
+                      </button>
+                    </div>
                 </div>
-                <a href="">
-                    <p>Máy tính bảng</p>
-                </a>
-                <a href="">
-                    <p>Pin dự phòng</p>
-                </a>
             </div>
             <div id="displayElement">
-                <img src="../image/xakho.png" alt="Lỗi" width="100%" height="100%">
+                <img src="../image/shop.webp" alt="Lỗi" width="100%" height="100%">
             </div>
         </div>
+        <div>
+            <button class="openCart"><img src="../image/giohang.png" alt=""></button>
+
+            <!-- <button class="openCart" onclick="openCart()"> Giỏ hàng </button> -->
+        </div>
+        <div>
+            <button class="nut-mo-chatbox" onclick="moForm()">Chat</button>
+            <div class="Chatbox" id="myForm">
+                <form action="" class="form-container">
+                    <h1>Chatbox</h1>
+                    <label for="msg"><b>Lời Nhắn</b></label>
+                    <textarea placeholder="Bạn hãy nhập lời nhắn.." name="msg" required></textarea>
+                    <button type="submit" class="btn">Gửi</button>
+                    <button type="button" class="btn nut-dong-chatbox" onclick="dongForm()">Đóng</button>
+                </form>
+            </div>
+        </div>
+        <div id="Editchange" class="Editchange">
+            <!-- <h2>Chỉnh sữa</h2> -->
+        </div>
     </div>
+
 </body>
 <script src="../js/changeimage.js"></script>
+<script src="../js/chatbox.js"></script>
 <script src="../js/product.js"></script>
+<script src="../js/edit.js"></script>
+<script src="../js/cart.js"></script>
 <script src="../js/index.js"></script>
 
 

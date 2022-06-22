@@ -24,7 +24,7 @@ function render(text) {
         "<tr><td><label for='info3'>Thông tin 3</label></td>" +
         "<td><input type='text' name='info3' size='25' maxlength='30' id='info3'></td></tr>" +
         "<tr><td></td><td>" +
-        "<button onclick='editForm()'>&emsp;" + text + "&emsp;</button> " +
+        "<button onclick='edit()'>&emsp;" + text + "&emsp;</button> " +
         "<button onclick='cancelEdit()'>&emsp;&emsp;Hủy&emsp;&emsp;</button></td></tr>" +
         "</table>"
     document.getElementById("Editchange").innerHTML = data
@@ -34,7 +34,7 @@ function cancelEdit() {
     document.getElementById("Editchange").innerHTML = ''
 }
 //edit khi click vào submit form
-function editForm() {
+function edit() {
     let name = document.getElementById("name").value
     let price = document.getElementById("price").value
     let type = document.getElementById("type").value
@@ -61,6 +61,11 @@ function editForm() {
                 arrayApple[i][j] = new Product(name, price, type, image, info1, info2, info3)
                 break
             }
+        case "headphone":
+            {
+                arrayHeadphone[i][j] = new Product(name, price, type, image, info1, info2, info3)
+                break
+            }
     }
     cancelEdit()
 }
@@ -72,23 +77,28 @@ function editProduct(i, j, type) {
     switch (type) {
         case "xiaomi":
             {
-                renderValueEdit(arrayXiaomi[i][j])
+                renderEdit(arrayXiaomi[i][j])
                 break
             }
         case "samsung":
             {
-                renderValueEdit(arraySamsung[i][j])
+                renderEdit(arraySamsung[i][j])
                 break
             }
         case "apple":
             {
-                renderValueEdit(arrayApple[i][j])
+                renderEdit(arrayApple[i][j])
+                break
+            }
+        case "headphone":
+            {
+                renderEdit(arrayHeadphone[i][j])
                 break
             }
     }
 }
 
-function renderValueEdit(product) {
+function renderEdit(product) {
     document.getElementById("name").value = product.getName()
     document.getElementById("price").value = product.getPrice()
     document.getElementById("type").value = product.getType()

@@ -9,7 +9,7 @@ signUpButton.addEventListener('click', () => {
 signInButton.addEventListener('click', () => {
     container.classList.remove("right-panel-active");
 });
-const DEFAULT_USERNAME = "admin";
+const DEFAULT_USERNAME = "Hovandat";
 const DEFAULT_PASSWORD = "123456";
 
 function validateFormLogin() {

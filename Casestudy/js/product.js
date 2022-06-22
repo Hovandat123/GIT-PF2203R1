@@ -64,3 +64,45 @@ class Product {
         return this.info3;
     }
 }
+class Proshow {
+    name
+    price
+    type
+    image
+    constructor(name, price, type, image) {
+        this.name = name;
+        this.price = price;
+        this.type = type;
+        this.image = image;
+    }
+    getName() {
+        return this.name;
+    }
+
+    getPrice() {
+        return this.price;
+    }
+
+    getImage() {
+        return this.image;
+    }
+
+    getType() {
+        return this.type;
+    }
+    setName(name) {
+        this.name = name;
+    }
+
+    setPrice(price) {
+        this.price = price;
+    }
+
+    setImage(image) {
+        this.image = image;
+    }
+
+    setType(type) {
+        this.type = type;
+    }
+}

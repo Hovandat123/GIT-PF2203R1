@@ -1,5 +1,4 @@
 // list điện thoại xiaomi
-// , "../image/add_cart.png"
 
 new Product("Xiaomi 12 series", "19.990.000", "xiaomi", "../image/Xiaomi-12-series.jpg", "Màn hình 6.28' Chip Snapdragon 8 Gen 1 8 nhân", "RAM 8 GB, ROM 256 GB", "Camera sau: Chính 50 MP & Phụ 13 MP, 5 MP")
 let xiaomi1 = new Product("Xiaomi 12 series ", "19.990.000", "xiaomi", "../image/Xiaomi-12-series.jpg", "Màn hình 6.28' Chip Snapdragon 8 Gen 1 8 nhân", "RAM 8 GB, ROM 256 GB", "Camera sau: Chính 50 MP & Phụ 13 MP, 5 MP")
@@ -35,6 +34,17 @@ let arrayApple = [
     [apple1, apple2, apple3],
     [apple4, apple5, apple6]
 ]
+new Product("Tai nghe Bluetooth AirPods 2 Wireless charge Apple MRXJ2", "3.490.000", "headphone", "../image/tai1.jpg")
+let headphone1 = new Product("AirPods 2 Wireless", "3.490.000", "headphone", "../image/tai1.jpg", "Sạc không giây chip H1", "Time 5 tiếng", "nhỏ gọn")
+let headphone2 = new Product("True Wireless JBL T115TWS", "990.000", "headphone", "../image/tai2.jpeg", "Blutooth 5.0", "Time 4.5 tiếng", "cổng sạc Type C")
+let headphone3 = new Product("True Wireless Mozard TS13", "390.000", "headphone", "../image/tai3.jpeg", "Sạc không giây", "Time 4 tiếng", "nhỏ gọn")
+let headphone4 = new Product("True Wireless AVA+ DS200A-WB", "390.000", "headphone", "../image/tai4.png", "Sạc không giây", "Time 4 tiếng", "cổng sạc Type C")
+let headphone5 = new Product("Tai nghe TWS Haylou GT6", "480.000", "headphone", "../image/tai5.jpg", "Blutooth 5.0", "Time 3 tiếng", "nhỏ gọn mẫu đẹp")
+let headphone6 = new Product("True Wireless Rezo F15", "480.000", "headphone", "../image/tai6.jpeg", "Sạc không giây", "Time .5 tiếng", "nhỏ gọn")
+let arrayHeadphone = [
+    [headphone1, headphone2, headphone3],
+    [headphone4, headphone5, headphone6]
+]
 
 function showElement(array) {
     let data = "<table>";
@@ -69,6 +79,7 @@ function showElement(array) {
     document.getElementById("displayElement").innerHTML = data
 }
 
+
 function showXiaomi() {
     showElement(arrayXiaomi)
 }
@@ -81,11 +92,15 @@ function showApple() {
     showElement(arrayApple)
 }
 
+function headphone() {
+    showElement(arrayHeadphone)
+}
+
 function checkAdmin() {
     let username = localStorage.getItem("username")
     let data = ""
     if (username === null) {
-        data += "<div id='admin'><a href='login.html'>Đăng nhập</a></div>"
+        data += "<div id='admin'><a href='login.html'>Đăng nhập/Đăng kí</a></div>"
         document.getElementById("headerAdmin").innerHTML = data
         return true;
     } else {
